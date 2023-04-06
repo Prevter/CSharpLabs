@@ -1,0 +1,46 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <SolidColorBrush x:Key="ForegroundColor" Color="White"/>
+    <SolidColorBrush x:Key="BackgroundColor" Color="#0d1117"/>
+    <SolidColorBrush x:Key="FrameBackgroundColor" Color="#2c2c2c"/>
+    
+    <!-- Tabs -->
+    <SolidColorBrush x:Key="TabBorder" Color="#6e7681"/>
+    <SolidColorBrush x:Key="TabBackground" Color="#0d1117"/>
+    <SolidColorBrush x:Key="TabForeground" Color="White"/>
+    <SolidColorBrush x:Key="SelectedTabBackground" Color="#2c2c2c"/>
+    <SolidColorBrush x:Key="SelectedTabForeground" Color="White"/>
+
+    <!-- Buttons -->
+    <SolidColorBrush x:Key="ButtonsBackground" Color="#383838"/>
+    <SolidColorBrush x:Key="ButtonsForeground" Color="White"/>
+    <SolidColorBrush x:Key="ButtonsDisabledBackground" Color="#505050"/>
+    <SolidColorBrush x:Key="ButtonsDisabledForeground" Color="#aaaaaa"/>
+    <SolidColorBrush x:Key="ButtonsSelected" Color="#666666"/>
+    <SolidColorBrush x:Key="ButtonsHoverBackground" Color="#484848"/>
+
+    <!-- Inputs -->
+    <SolidColorBrush x:Key="InputBackground" Color="#202020"/>
+    <SolidColorBrush x:Key="InputBorder" Color="#363636"/>
+    <SolidColorBrush x:Key="InputForeground" Color="#c6c6c6"/>
+    <SolidColorBrush x:Key="InputDisabledForeground" Color="#aaaaaa"/>
+
+    <!-- ComboBox -->
+    <SolidColorBrush x:Key="ComboboxBackground" Color="#202020"/>
+    <SolidColorBrush x:Key="ComboboxHoverBackground" Color="#4a4a4a"/>
+    <SolidColorBrush x:Key="ComboboxBorder" Color="#363636"/>
+    <SolidColorBrush x:Key="ComboboxArrowColor" Color="White"/>
+    <SolidColorBrush x:Key="ComboboxForeground" Color="#c6c6c6"/>
+
+    <!-- Scroll bar -->
+    <SolidColorBrush x:Key="ScrollBarBackground" Color="#2c2c2c"/>
+    <SolidColorBrush x:Key="ScrollBarForeground" Color="#808080"/>
+    <SolidColorBrush x:Key="ScrollBarDragForeground" Color="#a0a0a0"/>
+
+    <!-- Switches -->
+    <SolidColorBrush x:Key="SwitchCircleColor" Color="White"/>
+    <SolidColorBrush x:Key="SwitchCircleStroke" Color="Gray"/>
+    <SolidColorBrush x:Key="SwitchBackgroundOff" Color="#363636"/>
+    <SolidColorBrush x:Key="SwitchBackgroundOn" Color="#4CD661"/>
+
+</ResourceDictionary>

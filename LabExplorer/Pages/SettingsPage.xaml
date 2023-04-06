@@ -1,0 +1,26 @@
+﻿<Page x:Class="LabExplorer.Pages.SettingsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:LabExplorer.Pages"
+      xmlns:mvvm="clr-namespace:LabExplorer.MVVM"
+      mc:Ignorable="d" Title="Налаштування"
+      d:DesignHeight="50" d:DesignWidth="300">
+    <Page.DataContext>
+        <mvvm:SettingsViewModel/>
+    </Page.DataContext>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Тема програми:" HorizontalAlignment="Center" Margin="0,0,8,0"/>
+        <ComboBox ItemsSource="{Binding ThemeNames}" SelectedIndex="{Binding SelectedThemeIndex}" Grid.Column="1"/>
+
+    </Grid>
+</Page>

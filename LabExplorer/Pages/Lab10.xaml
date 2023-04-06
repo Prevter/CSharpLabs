@@ -1,0 +1,107 @@
+﻿<Page x:Class="LabExplorer.Pages.Lab10"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:models="clr-namespace:LabExplorer.MVVM.Labs"
+      xmlns:common="clr-namespace:LabExplorer.Common"
+      xmlns:local="clr-namespace:LabExplorer.Pages"
+      mc:Ignorable="d" Title="Лабораторна 10"
+      d:DesignHeight="450" d:DesignWidth="800">
+    <Page.DataContext>
+        <models:Lab10ViewModel/>
+    </Page.DataContext>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        
+        <Border CornerRadius="4" Margin="0,0,3,0" Grid.Column="0"
+                BorderBrush="{DynamicResource TabBorder}" BorderThickness="1">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Text="Границі значень:" Grid.Row="1" Margin="8,3" FontSize="18" />
+                <common:NumericTextBox Grid.Row="1" Grid.Column="1" Margin="8,3,4,3" IsDecimal="False"
+                        FontSize="18" Text="{Binding Min1, UpdateSourceTrigger=PropertyChanged}"/>
+                <common:NumericTextBox Grid.Row="1" Grid.Column="2" Margin="4,3,8,3" IsDecimal="False"
+                        FontSize="18" Text="{Binding Max1, UpdateSourceTrigger=PropertyChanged}"/>
+                
+                <TextBlock Text="Розмір масиву:" Grid.Row="2" Grid.ColumnSpan="2" Margin="8,3" FontSize="18" />
+                <common:NumericTextBox Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" Margin="8,3" IsDecimal="False"
+                        FontSize="18" Text="{Binding Size1, UpdateSourceTrigger=PropertyChanged}"/>
+                
+                <Button Content="Перегенерувати" Grid.Row="3" Margin="8,3" Height="24"
+                        Grid.ColumnSpan="3" Command="{Binding UpdateArray1}"/>
+
+                <TextBlock Text="{Binding ResultTask1}" Grid.Row="4" Margin="8,3" 
+                           FontSize="18" Grid.ColumnSpan="3" TextWrapping="Wrap" />
+                
+                <TextBlock Text="Завдання 1" HorizontalAlignment="Center" 
+                           FontSize="22" Grid.ColumnSpan="3" Margin="4"/>
+            </Grid>
+        </Border>
+
+        <GridSplitter
+            ResizeDirection="Columns"
+            Grid.Column="1"
+            Width="3"
+            Height="Auto"
+            HorizontalAlignment="Stretch"
+            VerticalAlignment="Stretch"
+            Margin="0"/>
+
+        <Border CornerRadius="4" Margin="3,0,0,0"  Grid.Column="2"
+                BorderBrush="{DynamicResource TabBorder}" BorderThickness="1">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+
+                <TextBlock Text="Границі значень:" Grid.Row="1" Margin="8,3" FontSize="18" />
+                <common:NumericTextBox Grid.Row="1" Grid.Column="1" Margin="8,3,4,3" IsDecimal="False"
+                        FontSize="18" Text="{Binding Min2, UpdateSourceTrigger=PropertyChanged}"/>
+                <common:NumericTextBox Grid.Row="1" Grid.Column="2" Margin="4,3,8,3" IsDecimal="False"
+                        FontSize="18" Text="{Binding Max2, UpdateSourceTrigger=PropertyChanged}"/>
+
+                <TextBlock Text="Розмір масиву:" Grid.Row="2" Grid.ColumnSpan="2" Margin="8,3" FontSize="18" />
+                <common:NumericTextBox Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" Margin="8,3" IsDecimal="False"
+                        FontSize="18" Text="{Binding Size2, UpdateSourceTrigger=PropertyChanged}"/>
+
+                <Button Content="Перегенерувати" Grid.Row="3" Margin="8,3" Height="24"
+                        Grid.ColumnSpan="3" Command="{Binding UpdateArray2}"/>
+
+                <TextBlock Text="{Binding ResultTask2}" Grid.Row="4" Margin="8,3" 
+                           FontSize="18" Grid.ColumnSpan="3" TextWrapping="Wrap" />
+
+                <TextBlock Text="Завдання 2" HorizontalAlignment="Center" 
+                           FontSize="22" Grid.ColumnSpan="3" Margin="4"/>
+            </Grid>
+        </Border>
+    </Grid>
+</Page>

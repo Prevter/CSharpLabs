@@ -1,0 +1,118 @@
+﻿<Page x:Class="LabExplorer.Pages.Lab09"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:models="clr-namespace:LabExplorer.MVVM.Labs"
+      xmlns:common="clr-namespace:LabExplorer.Common"
+      mc:Ignorable="d" Title="Лабораторна 9"
+      d:DesignHeight="450" d:DesignWidth="800">
+    <Page.DataContext>
+        <models:Lab09ViewModel/>
+    </Page.DataContext>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Border CornerRadius="4" Margin="0,0,3,0" Grid.Column="0"
+                BorderBrush="{DynamicResource TabBorder}" BorderThickness="1">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Text="X:" Grid.Row="1" Margin="8,3" FontSize="18" />
+                <common:NumericTextBox Grid.Row="1" Grid.Column="1" Margin="8,3" 
+                        FontSize="18" Text="{Binding ValueX, UpdateSourceTrigger=PropertyChanged}"/>
+
+                <TextBlock Text="Y:" Grid.Row="2" Margin="8,3" FontSize="18" />
+                <common:NumericTextBox Grid.Row="2" Grid.Column="1" Margin="8,3" 
+                        FontSize="18" Text="{Binding ValueY, UpdateSourceTrigger=PropertyChanged}"/>
+
+                <TextBlock Text="Z:" Grid.Row="3" Margin="8,3" FontSize="18" />
+                <common:NumericTextBox Grid.Row="3" Grid.Column="1" Margin="8,3"
+                        FontSize="18" Text="{Binding ValueZ, UpdateSourceTrigger=PropertyChanged}"/>
+
+                <TextBlock Text="{Binding ResultTask1}" Grid.Row="4" Margin="8,3" FontSize="18" Grid.ColumnSpan="2" TextWrapping="Wrap" />
+
+                <TextBlock Text="Завдання 1" HorizontalAlignment="Center" 
+                           FontSize="22" Grid.ColumnSpan="2" Margin="4"/>
+            </Grid>
+        </Border>
+
+        <GridSplitter
+            ResizeDirection="Columns"
+            Grid.Column="1"
+            Width="3"
+            Height="Auto"
+            HorizontalAlignment="Stretch"
+            VerticalAlignment="Stretch"
+            Margin="0"/>
+
+        <Border CornerRadius="4" Margin="3,0,0,0" 
+                BorderBrush="{DynamicResource TabBorder}" 
+                BorderThickness="1" Grid.Column="2">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                
+                <TextBlock Text="№" Grid.Row="1"
+                           Margin="8,3,4,3" FontSize="18" HorizontalAlignment="Center"/>
+                <TextBlock Text="Швидкість (л/год)" Grid.Row="1" Grid.Column="1"
+                           Margin="8,3" FontSize="18" HorizontalAlignment="Center"/>
+                <TextBlock Text="Час (год)" Grid.Row="1" Grid.Column="2" 
+                           Margin="8,3" FontSize="18" HorizontalAlignment="Center"/>
+
+                <TextBlock Text="1" Grid.Row="2" Margin="8,3,4,3" 
+                           FontSize="18" HorizontalAlignment="Center"/>
+                <common:NumericTextBox Grid.Row="2" Grid.Column="1" Margin="4,3" FontSize="18" 
+                           Text="{Binding Speed1, UpdateSourceTrigger=PropertyChanged}"/>
+                <common:NumericTextBox Grid.Row="2" Grid.Column="2" Margin="4,3,8,3" FontSize="18" 
+                           Text="{Binding Time1, UpdateSourceTrigger=PropertyChanged}"/>
+
+                <TextBlock Text="2" Grid.Row="3" Margin="8,3,4,3" 
+                           FontSize="18" HorizontalAlignment="Center"/>
+                <common:NumericTextBox Grid.Row="3" Grid.Column="1" Margin="4,3" FontSize="18" 
+                           Text="{Binding Speed2, UpdateSourceTrigger=PropertyChanged}"/>
+                <common:NumericTextBox Grid.Row="3" Grid.Column="2" Margin="4,3,8,3" FontSize="18" 
+                           Text="{Binding Time2, UpdateSourceTrigger=PropertyChanged}"/>
+
+                <TextBlock Text="3" Grid.Row="4" Margin="8,3,4,3" 
+                           FontSize="18" HorizontalAlignment="Center"/>
+                <common:NumericTextBox Grid.Row="4" Grid.Column="1" Margin="4,3" FontSize="18" 
+                           Text="{Binding Speed3, UpdateSourceTrigger=PropertyChanged}"/>
+                <common:NumericTextBox Grid.Row="4" Grid.Column="2" Margin="4,3,8,3" FontSize="18" 
+                           Text="{Binding Time3, UpdateSourceTrigger=PropertyChanged}"/>
+
+                <TextBlock Text="{Binding ResultTask2}" Grid.Row="5" Margin="8,3" FontSize="18" Grid.ColumnSpan="3" TextWrapping="Wrap" />
+
+                <TextBlock Text="Завдання 2" HorizontalAlignment="Center" 
+                           FontSize="22" Grid.ColumnSpan="3" Margin="4"/>
+            </Grid>
+        </Border>
+    </Grid>
+</Page>
