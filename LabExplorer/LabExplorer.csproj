@@ -16,10 +16,14 @@
     <ProjectReference Include="..\Lab_11\Lab_11.csproj" />
     <ProjectReference Include="..\Lab_12\Lab_12.csproj" />
     <ProjectReference Include="..\Lab_13\Lab_13.csproj" />
+    <ProjectReference Include="..\Lab_14\Lab_14.csproj" />
     <ProjectReference Include="..\Lab_9\Lab_9.csproj" />
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Pages\Lab14.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Pages\Lab13.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -29,6 +33,12 @@
     <Compile Update="Pages\Lab11.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="Pages\Lab14.xaml">
+      <SubType>Designer</SubType>
+    </Page>
   </ItemGroup>
 
 </Project>
