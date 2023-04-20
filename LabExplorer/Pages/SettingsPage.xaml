@@ -10,17 +10,21 @@
     <Page.DataContext>
         <mvvm:SettingsViewModel/>
     </Page.DataContext>
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-        </Grid.RowDefinitions>
+    <Border CornerRadius="4" Margin="0,0,0,0" Grid.Column="0"
+                BorderBrush="{DynamicResource TabBorder}" BorderThickness="1">
+        <ScrollViewer Margin="4">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
 
-        <TextBlock Text="Тема програми:" HorizontalAlignment="Center" Margin="0,0,8,0"/>
-        <ComboBox ItemsSource="{Binding ThemeNames}" SelectedIndex="{Binding SelectedThemeIndex}" Grid.Column="1"/>
-
-    </Grid>
+                <TextBlock Text="Тема програми:" HorizontalAlignment="Center" Margin="0,0,8,0"/>
+                <ComboBox ItemsSource="{Binding ThemeNames}" SelectedIndex="{Binding SelectedThemeIndex}" Grid.Column="1"/>
+            </Grid>
+        </ScrollViewer>
+    </Border>
 </Page>

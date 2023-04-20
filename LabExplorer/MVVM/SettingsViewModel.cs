@@ -10,7 +10,8 @@ namespace LabExplorer.MVVM
 		public List<KeyValuePair<string, string>> Themes = new()
 		{
 			new("Темна", "DarkTheme.xaml"),
-			new("Світла", "LightTheme.xaml")
+			new("Світла", "LightTheme.xaml"),
+			new("Амолед", "AmoledTheme.xaml")
 		};
 
 		public List<string> ThemeNames => Themes.Select(x => x.Key).ToList();
