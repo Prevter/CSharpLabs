@@ -20,10 +20,14 @@
     <ProjectReference Include="..\Lab_14\Lab_14.csproj" />
     <ProjectReference Include="..\Lab_15\Lab_15.csproj" />
     <ProjectReference Include="..\Lab_16\Lab_16.csproj" />
+    <ProjectReference Include="..\Lab_17\Lab_17.csproj" />
     <ProjectReference Include="..\Lab_9\Lab_9.csproj" />
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Pages\Lab17.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Pages\Lab16.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
