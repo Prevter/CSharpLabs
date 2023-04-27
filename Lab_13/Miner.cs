@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Labs.Lab13
+﻿namespace Labs.Lab13
 {
 	public sealed class Miner : Device
 	{
@@ -37,7 +31,7 @@ namespace Labs.Lab13
 				}
 			}, TokenSource.Token);
 		}
-		
+
 		public override void Deactivate()
 		{
 			TokenSource?.Cancel();

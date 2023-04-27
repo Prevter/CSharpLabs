@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Labs.Lab13
+﻿namespace Labs.Lab13
 {
 	public sealed class Microwave : Device
 	{
@@ -20,9 +14,9 @@ namespace Labs.Lab13
 		public override void Activate()
 		{
 			if (Active) return;
-			
+
 			Active = true;
-			
+
 			Task.Run(() =>
 			{
 				int timer = TimeRemaining;

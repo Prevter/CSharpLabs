@@ -1,22 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 
 namespace LabExplorer.Common
 {
-    public sealed partial class NumericTextBox : TextBox
+	public sealed partial class NumericTextBox : TextBox
 	{
 		public NumericTextBox()
 		{
 			Text = "0";
 		}
-			
+
 		public bool IsDecimal
 		{
 			get { return (bool)GetValue(IsDecimalProperty); }

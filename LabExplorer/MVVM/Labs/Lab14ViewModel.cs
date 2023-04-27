@@ -1,14 +1,8 @@
 ﻿using LabExplorer.Common;
-using Labs.Lab13;
 using Labs.Lab14;
-using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.ComponentModel;
 using System.Globalization;
-using System.Runtime.CompilerServices;
-using System.Windows;
-using System.Windows.Media;
 
 namespace LabExplorer.MVVM.Labs
 {
@@ -20,7 +14,7 @@ namespace LabExplorer.MVVM.Labs
 		private RelayCommand addNewConeCommand, deleteFigureCommand, sortFiguresCommand;
 
 		public ObservableCollection<IFigure> Figures { get; set; }
-		
+
 		public IFigure SelectedFigure
 		{
 			get => selectedFigure;
@@ -28,11 +22,11 @@ namespace LabExplorer.MVVM.Labs
 			{
 				if (value is Cone cone)
 					SelectCone(cone);
-				
+
 				SetField(ref selectedFigure, value);
 			}
 		}
-		
+
 		public string Radius
 		{
 			get => radius;

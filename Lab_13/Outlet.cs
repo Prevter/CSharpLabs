@@ -36,15 +36,15 @@
 				device.Deactivate();
 		}
 
-		public double TotalWattage 
-		{ 
-			get 
+		public double TotalWattage
+		{
+			get
 			{
 				double total = 0.0;
 				foreach (Device device in Devices)
 					total += device.Active ? device.Wattage : device.IdleWattage;
 				return total;
-			} 
+			}
 		}
 	}
 }

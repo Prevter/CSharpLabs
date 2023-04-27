@@ -1,15 +1,8 @@
 ﻿using LabExplorer.Common;
-using Labs.Lab14;
 using Labs.Lab15;
 using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.ComponentModel;
-using System.Globalization;
 using System.IO;
-using System.Runtime.CompilerServices;
 using System.Windows;
-using System.Windows.Media;
 
 namespace LabExplorer.MVVM.Labs
 {
@@ -77,7 +70,7 @@ namespace LabExplorer.MVVM.Labs
 
 		public void UpdateValues()
 		{
-			if (Leg.Parse(out double parsedLeg) && Angle.Parse(out double parsedAngle) 
+			if (Leg.Parse(out double parsedLeg) && Angle.Parse(out double parsedAngle)
 				&& parsedAngle > 0 && parsedAngle < 90 && parsedLeg > 0)
 			{
 				Leg1Value = parsedLeg;

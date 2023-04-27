@@ -1,11 +1,9 @@
 ﻿using LabExplorer.Common;
 using Labs.Lab12;
-using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Globalization;
 using System.Runtime.CompilerServices;
-using System.Windows;
 
 namespace LabExplorer.MVVM.Labs
 {
